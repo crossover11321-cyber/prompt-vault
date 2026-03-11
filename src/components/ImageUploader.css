@@ -1,0 +1,72 @@
+.image-uploader-dropzone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    padding: var(--space-2xl);
+    border: 2px dashed var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-bg-input);
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.image-uploader-dropzone:hover,
+.image-uploader-dropzone.dragging {
+    border-color: var(--color-accent);
+    background: var(--color-accent-subtle);
+}
+
+.image-uploader-icon {
+    color: var(--color-text-muted);
+    opacity: 0.6;
+}
+
+.image-uploader-dropzone:hover .image-uploader-icon,
+.image-uploader-dropzone.dragging .image-uploader-icon {
+    color: var(--color-accent);
+    opacity: 1;
+}
+
+.image-uploader-text {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    text-align: center;
+    line-height: var(--line-height-relaxed);
+}
+
+.image-uploader-text span {
+    font-size: var(--font-size-xs);
+    color: var(--color-accent);
+}
+
+.image-uploader-preview {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+}
+
+.image-uploader-preview img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.image-uploader-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.image-uploader-preview:hover .image-uploader-overlay {
+    opacity: 1;
+}

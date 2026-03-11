@@ -1,0 +1,108 @@
+.param-controls {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+}
+
+.param-controls-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.param-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+}
+
+.param-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.param-item-full {
+    grid-column: 1 / -1;
+}
+
+/* Aspect Ratio Presets */
+.aspect-presets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+}
+
+.aspect-btn {
+    padding: 4px 10px;
+    background: var(--color-bg-input);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-secondary);
+    font-family: var(--font-family);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.aspect-btn:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+.aspect-btn.active {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: white;
+    box-shadow: 0 0 8px var(--color-accent-glow);
+}
+
+/* Segment Buttons */
+.segment-buttons {
+    display: flex;
+    gap: 0;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+}
+
+.segment-btn {
+    flex: 1;
+    padding: 8px 12px;
+    background: var(--color-bg-input);
+    border: none;
+    border-right: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.segment-btn:last-child {
+    border-right: none;
+}
+
+.segment-btn:hover {
+    background: var(--color-bg-card-hover);
+}
+
+.segment-btn.active {
+    background: var(--color-accent);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .param-grid {
+        grid-template-columns: 1fr;
+    }
+}

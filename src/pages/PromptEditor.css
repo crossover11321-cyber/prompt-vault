@@ -1,0 +1,119 @@
+.editor-page {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: var(--space-lg);
+    min-height: 100vh;
+}
+
+.editor-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-xl);
+}
+
+.editor-title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+}
+
+.editor-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.editor-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+}
+
+.editor-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.editor-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    position: sticky;
+    top: var(--space-lg);
+}
+
+.prompt-body-textarea {
+    min-height: 160px;
+    font-size: var(--font-size-md);
+    line-height: var(--line-height-relaxed);
+}
+
+.required {
+    color: var(--color-danger);
+}
+
+/* Command Preview */
+.command-preview {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.command-preview-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.command-preview-title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-secondary);
+}
+
+.command-preview-code {
+    padding: var(--space-lg);
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    font-size: var(--font-size-sm);
+    color: var(--color-accent);
+    line-height: var(--line-height-relaxed);
+    white-space: pre-wrap;
+    word-break: break-all;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* Actions */
+.editor-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-md);
+    padding-top: var(--space-lg);
+    border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 900px) {
+    .editor-main {
+        grid-template-columns: 1fr;
+    }
+
+    .editor-sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 640px) {
+    .editor-header {
+        flex-direction: column;
+        gap: var(--space-sm);
+        align-items: flex-start;
+    }
+}
